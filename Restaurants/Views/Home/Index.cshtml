@@ -1,0 +1,16 @@
+@using Restaurants.Models;
+@model List<Restaurants.Models.Cuisine>;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Restaurants</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<h1>Welcome to the To Do List!</h1>
+<p>@Html.ActionLink("See all cuisines", "Index", "Cuisines")</p>
+<p>@Html.ActionLink("See all restaurants", "Index", "Restaurants")</p>

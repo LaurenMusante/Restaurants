@@ -1,0 +1,33 @@
+@model Restaurants.Models.Restaurant
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Restaurants</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+    <div class="container">
+    <h4>Add a new restaurant</h4>
+        @using (Html.BeginForm())
+        {
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name)
+            <br>
+
+            <p>On a scale of 1-10, how expensive is this restaurant? </p>
+
+            @Html.TextBoxFor(model => model.Price)
+            <br>
+            <label for="KidFriendly">Is it kid friendly?</label>
+            <br>
+            <p>@Html.CheckBoxFor(model => model.KidFriendly) Yes</p> 
+
+            <input type="submit" value="Add restaurant" />
+        }
+    </div>
+</html>
+
+

@@ -1,0 +1,30 @@
+@model Restaurants.Models.Cuisine
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Restaurants</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+    <div class="container">
+    <h4>Add a new cuisine</h4>
+        @using (Html.BeginForm())
+        {
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name)
+            <br>
+            <label for="Spicy">Is it Spicy?</label>
+            <br>
+
+            <p>@Html.CheckBoxFor(model => model.Spicy) Yes</p> 
+
+
+            <input type="submit" value="Add new category" />
+        }
+    </div>
+</html>
+
+
