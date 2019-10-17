@@ -1,0 +1,12 @@
+@model Restaurants.Models.Cuisine
+
+<h1>Cusine Details</h1>
+<hr />
+<h2> Spicy: 
+    @if (@Model.Spicy) 
+    { 
+        <p>It's spicy! 🌶️🌶️🌶️</p> 
+    }
+
+<p>@Html.ActionLink("Delete Cuisine", "Delete", new { id = @Model.CuisineId})</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
