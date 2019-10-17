@@ -1,5 +1,6 @@
-@using Restaurants.Models;
-@model List<Restaurants.Models.Restaurant>;
+@using Restaurants.Models
+@model List<Restaurants.Models.Restaurant>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +11,6 @@
 </head>
 <body>
     <div class="container">
-        <h1>Restaurants</h1>
-
         @if (@Model.Count == 0)
         {
         <h3>No restaurants have been added yet!</h3>
@@ -20,7 +19,7 @@
         <ul>
             @foreach (Restaurant restaurant in Model)
             {
-              <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.Id }) | @restaurant.Cuisine.Name</li>
+              <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.Id })</li>
             }
         </ul>
 

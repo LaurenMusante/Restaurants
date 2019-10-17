@@ -18,7 +18,8 @@ namespace Restaurants.Controllers
 
         public ActionResult Index()
         {
-            List<Restaurant> model = _db.Restaurants.Include(restaurants => restaurants.Cuisine).ToList(); //We can utilize eager loading by using Entity's built-in Include() methodThis basically states the following: for each Item in the database, include the Category it belongs to and then put all the Items into list.
+            List<Restaurant> model = _db.Restaurants.ToList();
+            // List<Restaurant> model = _db.Restaurants.Include(restaurant => restaurant.Cuisine).ToList(); //We can utilize eager loading by using Entity's built-in Include() methodThis basically states the following: for each Item in the database, include the Category it belongs to and then put all the Items into list.
             return View(model);
         }
 
