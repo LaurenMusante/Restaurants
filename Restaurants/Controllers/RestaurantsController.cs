@@ -26,7 +26,7 @@ namespace Restaurants.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.Id = new SelectList(_db.Restaurants, "Id", "Name");
+            ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
             return View();
         }
 

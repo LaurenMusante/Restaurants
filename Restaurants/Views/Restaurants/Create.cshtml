@@ -25,6 +25,9 @@
             <p>@Html.CheckBoxFor(model => model.KidFriendly) Yes</p> 
 
             <input type="submit" value="Add restaurant" />
+
+            @Html.LabelFor(model => model.Cuisine)
+            @Html.DropDownList("CuisineId");
         }
     </div>
 </html>
